@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50522
 File Encoding         : 65001
 
-Date: 2017-10-30 16:06:41
+Date: 2017-10-30 16:14:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -359,35 +359,3 @@ INSERT INTO `tbl_title` VALUES ('6', '1', '2017-10-24 10:44:31', '', null, '1',
 INSERT INTO `tbl_title` VALUES ('7', '1', '2017-10-24 11:15:38', '', null, '1', '2017-10-25 15:21:51', '嘀咕嘀咕', '1', '单选', '', '', '', '', '', '', null);
 INSERT INTO `tbl_title` VALUES ('14', '1', '2017-10-25 09:35:20', '', null, '1', '2017-10-25 23:42:05', 'fdf', '2', '判断', '', '', '', '', '', '', 'A');
 INSERT INTO `tbl_title` VALUES ('15', '1', '2017-10-25 09:35:37', '\0', null, '1', '2017-10-25 09:35:37', 'ggggg', '1', '判断', '', '', '', '', '', '', 'C');
-
--- ----------------------------
--- Table structure for tb_employee
--- ----------------------------
-DROP TABLE IF EXISTS `tb_employee`;
-CREATE TABLE `tb_employee` (
-  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
-  `xuehao` varchar(32) NOT NULL DEFAULT '' COMMENT '学号',
-  `name` varchar(32) NOT NULL DEFAULT '' COMMENT '姓名',
-  `banji` varchar(32) CHARACTER SET utf8mb4 NOT NULL COMMENT '身份证',
-  `yinhangka` varchar(32) CHARACTER SET utf8mb4 NOT NULL COMMENT '一卡通',
-  `yikatong` varchar(32) CHARACTER SET utf8mb4 NOT NULL,
-  `create_by` int(11) NOT NULL,
-  `create_date` datetime NOT NULL,
-  `del_flag` bit(1) NOT NULL,
-  `remarks` varchar(255) DEFAULT NULL,
-  `update_by` int(11) NOT NULL,
-  `update_date` datetime NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=145 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of tb_employee
--- ----------------------------
-INSERT INTO `tb_employee` VALUES ('137', '2015060703315', '孔繁楷', '软件153', '6217003320039179208', '132603', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
-INSERT INTO `tb_employee` VALUES ('138', '2015050410302', '陈焕琴', '平面154', '6217003320039230068', '135142', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
-INSERT INTO `tb_employee` VALUES ('139', '2015010103339', '姚法芝', '工控151', '6217003320039191468', '131767', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
-INSERT INTO `tb_employee` VALUES ('140', '2015130101320', '黎小英', '楼宇151', '6217003320035835860', '', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
-INSERT INTO `tb_employee` VALUES ('141', '2015060703314', '柯新钿', '软件153', '6217003320039179042', '132566', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
-INSERT INTO `tb_employee` VALUES ('142', '2015080201339', '王广南', '智电151', '6217003320039176931', '130596', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
-INSERT INTO `tb_employee` VALUES ('143', '2015060703321', '林冰莲', '软件153', '6217003320039179406', '132521', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
-INSERT INTO `tb_employee` VALUES ('144', '2015060703344', '杨华邦', '软件153', '6217003320039179307', '132589', '0', '0000-00-00 00:00:00', '\0', null, '0', '0000-00-00 00:00:00');
