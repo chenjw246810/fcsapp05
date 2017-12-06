@@ -1,0 +1,60 @@
+.mui-media {
+	font-size: 14px;
+}
+
+.mui-table-view .mui-media-object {
+	max-width: initial;
+	width: 90px;
+	height: 70px;
+}
+
+.meta-info {
+	position: absolute;
+	left: 115px;
+	right: 15px;
+	bottom: 8px;
+	color: #8f8f94;
+}
+
+.meta-info .author,
+.meta-info .time {
+	display: inline-block;
+}
+
+.meta-info .time {
+	float: right;
+}
+
+.mui-table-view:before,
+.mui-table-view:after {
+	height: 0;
+}
+
+.mui-content>.mui-table-view:first-child {
+	margin-top: 1px;
+}
+
+.banner {
+	height: 180px;
+	overflow: hidden;
+	position: relative;
+	background-position: center;
+	background-color: #ccc;
+}
+
+.banner img {
+	width: 100%;
+	height: auto;
+}
+
+.banner .title {
+	position: absolute;
+	left: 15px;
+	bottom: 15px;
+	width: 90%;
+	font-size: 16px;
+	font-weight: 400;
+	line-height: 21px;
+	color: white;
+	z-index: 11;
+}

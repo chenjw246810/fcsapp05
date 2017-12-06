@@ -1,0 +1,77 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>列表到详情最佳实践</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/errors/tab_errors.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">错题</h1>
+		</header>
+
+		<!--内容-->
+		<div class="mui-content" id="news">
+			<div id="slider" class="mui-slider">
+				<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+					<a class="mui-control-item" href="#item1mobile">
+						政治
+					</a>
+					<a class="mui-control-item" href="#item2mobile">
+						历史
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						地理
+					</a>
+					<a class="mui-control-item" href="#item3mobile">
+						yuii
+					</a>
+				</div>
+				<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-4"></div>
+				<div class="mui-slider-group">
+					<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+
+						<ul id="list" class="mui-table-view">
+							<li class="mui-table-view-cell mui-media" v-for="item in items">
+								<a href="javascript:;" :data-guid="item.guid" @tap="open_detail(item)">
+
+									<div class="mui-media-body">
+										<div class="mui-ellipsis-2">{{item.title}}</div>
+									</div>
+									<div class="meta-info">
+										<div class="time">{{item.time}}</div>
+									</div>
+
+								</a>
+							</li>
+						</ul>
+
+					</div>
+					<div id="item2mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-loading">
+							<div class="mui-spinner">
+								<div class="mui-spinner-indicator mui-spinner-indicator1"></div>
+							</div>
+						</div>
+					</div>
+					<div id="item3mobile" class="mui-slider-item mui-control-content">
+						<div class="mui-loading">
+							<div class="mui-spinner">
+								<div class="mui-spinner-indicator mui-spinner-indicator12"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/vue.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/errors/tab-errors.js"></script>
+	</body>
+
+</html>

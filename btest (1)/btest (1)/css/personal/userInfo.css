@@ -1,0 +1,37 @@
+      
+			.radio_inline{
+        display: inline-block;
+        width: 65%;
+    	}
+    .radio_inline label{
+
+        width: 20%;
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .radio_inline input[type=radio]{
+        width: 15%;             
+        right: auto;
+    }
+    
+    
+
+   .change .mui-radio input[type='radio']:checked:before{
+    content:'\e442';
+    color:red;
+    }
+    
+    .mui-input-group{
+    	position: absolute;
+    	top: 13%;
+    	left: 0%;
+    	right: 0% ;
+    }
+    
+        .mui-btn-primary{
+    	width: 45%;
+    }
+    .mui-input-row label{
+    	font-family: "微软雅黑";
+    }
+		

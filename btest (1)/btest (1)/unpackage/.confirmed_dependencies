@@ -1,0 +1,57 @@
+{
+	"main.html": {
+		"refer": [
+			"setting.html"
+		],
+		"resources": []
+	},
+	"login.html": {
+		"refer": [
+			"main.html",
+			"reg.html",
+			"index.html"
+		],
+		"resources": []
+	},
+	"html/login/login.html": {
+		"resources": [
+			"js/login/app.js",
+			"js/login/login.js"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"index.html": {
+		"resources": [
+			"html/home/tab-main.html"
+		],
+		"refer": [
+			"html/score/tab-score.html",
+			"html/personal/tab-personal.html",
+			"html/errors/tab-errors.html",
+			"html/home/tab-main.html"
+		]
+	},
+	"html/personal/tab-personal.html": {
+		"refer": [
+			"html/personal/development_chart.html",
+			"html/personal/userInfo.html"
+		]
+	},
+	"html/home/tab-main.html": {
+		"refer": [
+			"html/home/topic_content.html"
+		]
+	},
+	"html/home/topic_content.html": {
+		"refer": [
+			"html/home/topic_backup.html"
+		]
+	},
+	"html/home/topic_backup.html": {
+		"refer": [
+			"html/home/topic_answer.html"
+		]
+	}
+}

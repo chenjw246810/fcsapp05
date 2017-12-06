@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<link href="../../css/login/modify_pw.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<h1 class="mui-title">修改密码</h1>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group">
+				<div class="mui-input-row">
+					<label>旧密码</label>
+					<input id='opw' type="email" class="mui-input-clear mui-input" placeholder="请输入旧密码">
+				</div>
+			</form>
+			<form class="mui-input-group mui-input-row">
+				<div>
+					<label>新密码</label>
+					<input id='npw' type="text" placeholder="请输入新密码">
+				</div>
+			</form>
+			<form class="mui-input-group mui-input-row">
+				<div>
+					<label>确认密码</label>
+					<input id='spw' type="text" placeholder="再次输入新密码">
+				</div>
+			</form>
+			<div class="mui-content-padded" align="center">
+				<button id='sure' class="mui-btn mui-btn-block mui-btn-primary" >确认</button>
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/login/modify_pw.js"></script>
+	</body>
+
+</html>

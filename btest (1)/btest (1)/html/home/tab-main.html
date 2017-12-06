@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title>主页</title>
+		<script type="text/javascript" src="../../js/mui.min.js"></script>
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/home/tab-main.css" />
+		<link rel="stylesheet" href="../../css/header.css" />
+		<link rel="stylesheet" href="../../css/iconfont.css" />
+		<link href="css/index.css" rel="stylesheet" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<h1 class="mui-title">主页</h1>
+		</header>
+		<div class="mui-content">
+			<!--轮播图			-->
+			<div id="slider" class="mui-slider">
+				<div class="mui-slider-group mui-slider-loop">
+					<!-- 额外增加的一个节点(循环轮播：第一个节点是最后一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../../images/home/banner3.jpg" class="banner_pictures">
+						</a>
+					</div>
+					<!-- 第一张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../../images/home/banner1.jpg" class="banner_pictures">
+						</a>
+					</div>
+					<!-- 第二张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../../images/home/banner2.jpg">
+						</a>
+					</div>
+					<!-- 第三张 -->
+					<div class="mui-slider-item">
+						<a href="#">
+							<img src="../../images/home/banner3.jpg">
+						</a>
+					</div>
+
+					<!-- 额外增加的一个节点(循环轮播：最后一个节点是第一张轮播) -->
+					<div class="mui-slider-item mui-slider-item-duplicate">
+						<a href="#">
+							<img src="../../images/home/banner1.jpg">
+						</a>
+					</div>
+				</div>
+				<div class="mui-slider-indicator">
+					<div class="mui-indicator mui-active"></div>
+					<div class="mui-indicator"></div>
+					<div class="mui-indicator "></div>
+				</div>
+			</div>
+			<!--导航菜单-->
+			<ul class="mui-table-view mui-grid-view mui-grid-9 " id="mygrid">
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#" id="lishi">
+						<span class="mui-icon iconfont icon-lishi"></span>
+						<div class="mui-media-body">历史</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4 ">
+					<a href="#" id="zhili">
+						<span class="mui-icon iconfont icon-zhili"></span>
+						<div class="mui-media-body">智力</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#" id="humanity">
+						<span class="mui-icon iconfont icon-liangxing"></span>
+						<div class="mui-media-body">两性</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<span class="mui-icon iconfont icon-icon13"></span>
+						<div class="mui-media-body">生活</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<span class="mui-icon iconfont icon-wenxue"></span>
+						<div class="mui-media-body">文学</div>
+					</a>
+				</li>
+				<li class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-4">
+					<a href="#">
+						<span class="mui-icon iconfont icon-qinggan"></span>
+						<div class="mui-media-body">情感</div>
+					</a>
+				</li>
+			</ul>
+
+		</div>
+
+		<script>
+			// mui初始化
+			mui.init();
+			//获得slider插件对象
+			var gallery = mui('.mui-slider');
+			gallery.slider({
+				interval: 5000 //自动轮播周期，若为0则不自动播放，默认为0；
+			});
+
+			document.addEventListener('touchstart', function(event) {
+				// 判断默认行为是否可以被禁用
+				if(event.cancelable) {
+					// 判断默认行为是否已经被禁用
+					if(!event.defaultPrevented) {
+						event.preventDefault();
+					}
+				}
+			}, false);
+			mui('.mui-bar-tab').on('tap', 'a', function() {
+				document.location.href = this.href;
+			});
+			var IPPost = localStorage.getItem("IPPost");
+			var url = IPPost + 'examonline/exam/appselectThemeId';
+			//点击历史
+			document.getElementById("lishi").addEventListener('tap', function() {
+				mui.ajax(url, {
+					data: {
+						'theme': 1,
+					},
+					type: "GET",
+					timeout: 3000,
+					error: function() {
+						mui.toast("网路错误")
+					},
+					success: function(message) {
+						var message = message;
+						mui.openWindow({
+							url: 'topic_content.html',
+							id: 'topic_content',
+							extras: {
+								message: message
+							}
+						});
+					}
+				});
+			})
+			//点击智力
+			document.getElementById("zhili").addEventListener('tap', function() {
+				mui.ajax(url, {
+					data: {
+						'theme': 2,
+					},
+					type: "GET",
+					timeout: 3000,
+					error: function() {
+						mui.toast("网路错误")
+					},
+					success: function(message) {
+						var message = message;
+						mui.openWindow({
+							url: 'topic_content.html',
+							id: 'topic_content',
+							extras: {
+								message: message
+							}
+						});
+					}
+				});
+			})
+			//点击两性
+			document.getElementById("humanity").addEventListener('tap', function() {
+				mui.ajax(url, {
+					data: {
+						'theme': 3,
+					},
+					type: "GET",
+					timeout: 3000,
+					error: function() {
+						mui.toast("网路错误")
+					},
+					success: function(message) {
+						var message = message;
+						mui.openWindow({
+							url: 'topic_content.html',
+							id: 'topic_content',
+							extras: {
+								message: message
+							}
+						});
+					}
+				});
+			})
+		</script>
+	</body>
+
+</html>

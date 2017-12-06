@@ -1,0 +1,44 @@
+
+	.mui-media{
+		margin-top: 0px;
+		margin-bottom: 20px;
+	
+	}
+	.mui-navigate-right{
+		text-indent: 35px;
+		font-size: 18px;	
+	}
+	#cell1{
+		background: url(../../images/personal/chengzhang.png);
+		background-repeat: no-repeat;
+		background-position: 10px 6px;
+	}
+	#cell2{
+		background:url(../../images/personal/updatepass.png);
+		background-repeat: no-repeat;
+		background-position: 10px 6px;
+	}
+	#cell3{
+		background:url(../../images/personal/setting.png);
+		background-repeat: no-repeat;
+		background-position: 10px 6px;
+	}
+	#cell4{
+		background:url(../../images/personal/logout.png);
+		background-repeat: no-repeat;
+		background-position: 10px 6px;
+	}
+		#p_username{
+		position: absolute;
+		top:1.5rem;
+		font-family: "微软雅黑";
+		font-weight: bold;
+		font-size:1.2em;
+		z-index: 3;
+	}
+	#p_memo{
+		position: absolute;
+		top:3.5rem;
+		z-index: 2;
+		font-size: 0.9em;
+	}

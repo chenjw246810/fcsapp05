@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html class="ui-page-login">
+
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" href="../../css/mui.css" />
+		<link rel="stylesheet" href="../../css/mui.min.css" />
+		<link rel="stylesheet" href="../../css/style.css" />
+		<link rel="stylesheet" href="../../css/login/login.css" />
+	</head>
+
+	<body>
+		<div class="mui-content">
+			<form >
+				<div align="center">
+					<img src="../../images/login/icon.png" class="mui-icon-image"/>
+				</div>
+			</form>
+			<form id='login-form' class="mui-input-group">
+				<div class="mui-input-row">
+					<label id="username">|</label>
+					<input id='account' type="text" class="mui-input-clear mui-input" placeholder="请输入邮箱" onkeyup="value=value.replace(/\s+/g,'')">
+				</div>
+				<div class="mui-input-row">
+					<label id="userpassword">|</label>
+					<input id='password' type="password" class="mui-input-clear mui-input" placeholder="请输入密码" onKeyUp="value=value.replace(/[\W]/g,'')">
+				</div>
+			</form>
+			<form >
+				<ul class="mui-table-view mui-table-view-chevron mui-input-group">
+					<li class="mui-table-view-cell">
+						自动登录
+						<div id="autoLogin" class="mui-switch">
+							<div class="mui-switch-handle"></div>
+						</div>
+					</li>
+				</ul>
+			</form>
+			<div class="mui-content-padded" align="center">
+				<button id='login' class="mui-btn mui-btn-block mui-btn-primary" >登录</button>
+			</div>
+			<div class="link-area">
+				<a id='reg' >注册账号</a> <span class="spliter">|</span> <a id='forgetPassword' >忘记密码</a>				
+			</div>
+		</div>
+		<script src="../../js/mui.min.js"></script>		
+		<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+		<script src="../../js/login/app.js"></script>
+		<script src="../../js/login/login.js"></script>
+	</body>
+
+</html>

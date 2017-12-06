@@ -1,0 +1,115 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.css" rel="stylesheet" />
+		<link href="../../css/topic_content.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/iconfont.css" />
+		<link rel="stylesheet" href="../../css/header.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			<div id="time_group">
+				<span class="mui-icon iconfont icon-shijian"></span>
+				<p id="timer"></p>
+			</div>
+			<div id="topic_group">
+				<span class="mui-icon iconfont icon-mulushuju"></span>
+				<p id="topicNumber">1/50</p>
+			</div>
+		</header>
+
+		<div class="mui-content">
+			<div class=" topic_content">
+				<div id="title" class="mui-card topic">题目</div>
+				<!--选择题+判断题-->
+				<div id="content1" style="display:none">
+					<div class="mui-card topic_item">
+						<form class="mui-input-group">
+							<div class="mui-input-row mui-radio mui-left radioItem question"  style="height: 80%;">
+								<label id="a_answer">A．答案</label>
+								<input name="radio-item" type="radio" value="A">
+							</div>
+							<div class="mui-input-row mui-radio mui-left radioItem">
+								<label id="b_answer" class="test">B．答案</label>
+								<input name="radio-item" type="radio" value="B">
+							</div>
+							<div class="mui-input-row mui-radio mui-left radioItem" id="c_div">
+								<label id="c_answer" class="test">C．答案</label>
+								<input name="radio-item" type="radio" value="C">
+							</div>
+							<div class="mui-input-row mui-radio mui-left radioItem" id="d_div">
+								<label id="d_answer" class="test">D．答案</label>
+								<input name="radio-item" type="radio" value="D">
+							</div>
+						</form>
+					</div>
+				</div>
+				
+				<!--多选题-->
+				<div id="content3" style="display:none">
+					<div class="mui-card topic_item">
+						<form class="mui-input-group">
+							<div class="mui-input-row mui-checkbox mui-left radioItem "  style="height: 80%;">
+								<label id="a_answer_3">A．多选</label>
+								<input name="radio-item3" type="checkbox" value="A">
+							</div>
+							<div class="mui-input-row mui-checkbox mui-left radioItem">
+								<label id="b_answer_3" class="test">B．多选</label>
+								<input name="radio-item3" type="checkbox" value="B">
+							</div>
+							<div class="mui-input-row mui-checkbox mui-left radioItem">
+								<label id="c_answer_3" class="test">C．多选</label>
+								<input name="radio-item3" type="checkbox" value="C">
+							</div>
+							<div class="mui-input-row mui-checkbox mui-left radioItem">
+								<label id="d_answer_3" class="test">D．多选</label>
+								<input name="radio-item3" type="checkbox" value="D">
+							</div>
+							<div class="mui-input-row mui-checkbox mui-left radioItem" id="e_div">
+								<label id="e_answer_3" class="test">E．多选</label>
+								<input name="radio-item3" type="checkbox" value="E">
+							</div>
+							<div class="mui-input-row mui-checkbox mui-left radioItem" id="f_div">
+								<label id="f_answer_3" class="test">F．多选</label>
+								<input name="radio-item3" type="checkbox" value="F">
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<!--底部栏（含翻页和提交）-->
+				<div class="mui-bar mui-bar-footer">
+					<button type="button" class="mui-btn mui-btn-primary" id="btn_commit">提交</button>
+					<div class="mui-content-padded">
+						<ul class="mui-pager">
+							<li >
+								<a href="#" id="top">
+									上一页
+								</a>
+							</li>
+							<li>
+								<a href="#" id="next" >
+									下一页
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script type="text/javascript" src="../../js/mui.min.js"></script>
+		<script src="../../js/jquery-3.2.1.min.js"></script>
+		<script src="../../js/home/topic_content.js"></script>
+		<script type="text/javascript">
+			mui.init()
+		</script>
+	</body>
+
+</html>

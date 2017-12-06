@@ -1,0 +1,64 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link rel="stylesheet" href="../../css/header.css" />
+		<link rel="stylesheet" href="../../css/personal/userInfo.css" />
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+		    <a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" style="color: white;"></a>
+		    <h1 class="mui-title">用户信息</h1>
+		</header>
+		<div class="mui-content">
+			<form class="mui-input-group">
+				<div class="mui-input-row" id="portrait">
+					<label>头像</label>
+					<img src="../../images/personal/user-photo.png" style="width: 30px;height: 30px;" id="photo"/>
+				</div>
+				<div class="mui-input-row">
+					<label>用户名</label>
+					<input type="text" placeholder="请输入用户名" id="loginName">
+				</div>
+				<div class="mui-input-row">
+					<label>姓名</label>
+					<input type="text" placeholder="请输入姓名" id="Name">
+				</div>
+				<div class="mui-input-row">
+					<label>性别</label>
+					<span class="radio_inline mui-radio">
+                            <input name="Genderradio" type="radio" id="radio_man" checked value="1">
+                            <label for="radio_man">男</label>
+                            <input name="Genderradio" type="radio" id="radio_woman" value="0">     
+                            <label for="radio_woman">女</label>        
+                    </span>            
+				</div>
+				<div class="mui-input-row">
+					<label>手机号</label>
+					<input type="text" class="mui-input-clear"placeholder="请输入手机号码" id="phone">
+				</div>
+				<div class="mui-input-row">
+					<label>邮箱</label>
+					<input type="text" readonly="readonly" value="xxxxxxxx@qq.com">
+				</div>
+				<div class="mui-input-row">
+					<label>个性签名</label>
+					<input type="text" id="memo" class="mui-input-clear" >
+				</div> 	
+				<div class="mui-button-row">	
+				        <button type="button" data-loading-text="提交中" class="mui-btn mui-btn-primary" id="submit">保存</button>
+				</div>
+									
+			</form>
+		</div>
+		<script src="../../js/mui.min.js"></script>
+		<script type="text/javascript" src="../../js/jquery-3.2.1.min.js" ></script>
+		<script src="../../js/personal/userInfo.js"></script>
+	</body>
+
+</html>

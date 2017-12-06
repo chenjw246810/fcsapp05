@@ -1,0 +1,85 @@
+	body{
+		text-align: center;	
+	}
+	.mui-content{
+		margin: 0 auto;
+		background: #f7f5f7;
+		max-width: 100%;
+		max-height: 90%;
+		word-wrap: break-word;
+		width:fit-content;
+	/*	width:-webkit-fit-content;*/
+		width:-moz-fit-content;
+	}
+	.mui-pull-left{
+		color: white;
+	}
+	#time_group p,span{
+		float: left;
+		color: white;
+	}
+	#timer{
+		font-size: 18px;
+		line-height: 44px;
+		margin:2px;
+	}
+	#time_group{
+		position: absolute;
+		left: 20%;
+		bottom:20%;
+		height: 44px;
+		padding: 2px;
+		opacity: 0.5;
+	}
+	#topic_group{
+		bottom:0%;
+		position: absolute;
+		left: 60%;
+	}
+	#topic_group p,span{
+		float: left;
+		color: white;
+		height: 44px;
+		padding: 2px;
+		opacity: 0.5;
+		
+	}
+	#topicNumber{
+		font-size: 18px;
+		line-height: 44px;
+		margin-left: 2px;
+	}
+	.topic_content{
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: 5%;
+		padding: 5px;
+	}
+	.topic{
+		color: #000000;
+		background: white;
+		padding: 15px;
+		font-size: 15px;
+		text-indent: 15px;
+		max-width: 95%;
+		max-height: 90%;
+		word-wrap: break-word;
+		width:fit-content;
+		/*width:-webkit-fit-content;*/
+		width:-moz-fit-content;
+	}
+	.radioItem label{
+		font-size: 14px;
+		margin-top: -1px;
+	}
+	.mui-content-padded{
+		float: right;
+		margin: 0px;
+	}
+	.mui-pager{
+		margin-top: 7px;
+	}
+	#btn_commit{
+		float: left;
+	}
